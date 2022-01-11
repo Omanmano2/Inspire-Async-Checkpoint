@@ -10,7 +10,7 @@ export class Weather{
 
   get Template() {
     return /*html*/ `
-    <div class="col-2 bg-light">
+    <div class="col-2 bg-primary  m-1">
     <div class="row">
       <div class="col-1">
         <img src="http://openweathermap.org/img/wn/${this.icon}@2x.png" alt="weather-icon">
@@ -28,7 +28,7 @@ export class Weather{
 
   get Template2() {
     return /*html*/ `
-    <div class="col-2 bg-light">
+    <div class="col-2 bg-primary">
     <div class="row">
       <div class="col-1">
         <img src="http://openweathermap.org/img/wn/${this.icon}@2x.png" alt="weather-icon">

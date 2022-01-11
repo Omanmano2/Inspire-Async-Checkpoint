@@ -8,7 +8,7 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>Inspire-Async-Checkpoint</title>
@@ -46,25 +46,34 @@
           </div>
         </div> -->
       <div class="row justify-content-center mt-5">
-        <div class="col-4 text-center bg-light ">
+        <div class="col-4 text-center bg-primary ">
           <h1 id="clockArea"></h1>
         </div>
       </div>
 
-      <div class="row d-flex justify-content-between align-items-end mt-5 mx-2">
-        <div class="col-4 bg-light">
-          <h2>quote</h2>
+      <div class="row d-flex justify-content-between align-items-end pt-5 mx-2">
+        <div class="col-4 bg-primary text-center d-flex mb-2" >
+          <span id="quoteArea">
+            <!-- <h3>quote</h3>
+            <h5>author</h5> -->
+          </span>
         </div>
-        <div class="col-3 bg-light">
-          <div id="todo">
-            <ul>
+        <div class="col-3 bg-primary mb-2" style="height: 100%;">
+          <div>
+            <ul id="todo">
+              <!-- <li class="py-3 text-even">
+                <h5 onclick="app.toDoController.completeToDo('${this.id}')">${this.taskName}</h5>
+                <i class="mdi mdi-delete selectable" onclick="app.toDoController.deleteToDo('${this.id}')"></i>
+              </li> -->
 
             </ul>
-            <!-- <form onsubmit="app.playersController.addPlayer()"> -->
+            <form onsubmit="app.toDoController.addToDo()">
               <div class="form-group d-flex my-2">
-                <input type="text" name="name" id="" class="form-control" placeholder="Add Player..." required>
+                <input type="text" name="description" id="" class="form-control" placeholder="Add To Do..." required>
                 <button class="btn btn-success">+</button>
               </div>
+            </form>
+
           </div>
         </div>
       </div>
@@ -88,6 +97,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"
     integrity="sha512-u9akINsQsAkG9xjc1cnGF4zw5TFDwkxuc9vUp5dltDWYCSmyd0meygbvgXrlc/z7/o4a19Fb5V0OUE58J7dcyw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="app/main.js" type="module"></script>
 </body>
 

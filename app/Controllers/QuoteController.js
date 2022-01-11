@@ -1,4 +1,14 @@
+import { ProxyState } from "../AppState.js"
 import { quoteService } from "../Services/QuoteService.js"
+
+
+
+
+function _drawQuote(){
+  const quote = ProxyState.quote
+  document.getElementById('quoteArea').innerHTML = quote.Template
+}
+
 
 async function _getQuote(){
   try {
@@ -8,7 +18,9 @@ async function _getQuote(){
   }
 }
 export class QuoteController{
-  constructor(data){
+  constructor(){
+    ProxyState.on('quote' , _drawQuote)
     _getQuote()
   }
+
 }

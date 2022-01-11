@@ -1,4 +1,8 @@
 /* BASIC STYLES HERE */
-body {
-  background-image: cover;
+.author{
+  display: none;
+}
+
+.show:hover + .author {
+  display: block;
 }
