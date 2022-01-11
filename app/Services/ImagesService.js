@@ -4,7 +4,7 @@ import { sandboxApi } from "./AxiosService.js"
 
 class ImagesService{
   async getApiImages() {
-    const res = await sandboxApi.get('imageddddeddsds')
+    const res = await sandboxApi.get('images')
     console.log(res.data)
     ProxyState.images = new Image(res.data)
   }

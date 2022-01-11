@@ -5,7 +5,8 @@ import { imagesService } from "../Services/ImagesService.js"
 function _drawBackground() {
   const background = ProxyState.images
   console.log('images', background.Template)
-  document.body.style.background = "url(background.Template)"
+  document.body.style.background = `url(${background.Template})` 
+  document.getElementById("body").style.backgroundSize = "cover";
 }
 
 
