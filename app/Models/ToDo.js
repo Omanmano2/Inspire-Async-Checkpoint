@@ -12,8 +12,8 @@ export class ToDo {
     return /*html*/ `
     <li class="py-3 text-even">
     <div class= "d-flex justify-content-between align-items-baseline text-center">
-     <input type="checkbox" id="completed" ${this.completed ? 'checked' : ''} onclick="app.toDoController.completeToDo()" />
-     <h5 onclick="app.toDoController.completeToDo('${this.id}')">${this.description}</h5>
+     <input type="checkbox" id="completed" ${this.completed ? 'checked' : ''} onclick="app.toDoController.completeToDo('${this.id}')" />
+     <h5 class= "${this.completed ?'text-decoration-line-through': ''}">${this.description}</h5>
      <i class="mdi mdi-delete selectable" onclick="app.toDoController.deleteToDo('${this.id}')"></i>
     </div>
    </li>

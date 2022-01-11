@@ -21,6 +21,15 @@ class ToDoService{
     console.log('delete list', res.data)
     ProxyState.toDoItems = ProxyState.toDoItems.filter(t => t.id != id)
   }
+
+
+  async completeToDo(id) {
+    let done = ProxyState.toDoItems.find(d => d.id == id)
+    done.completed = !done.completed
+    console.log(done)
+    const res = await sandboxApi.put(`/Owen/todos/${id}`, done.completed)
+    ProxyState.toDoItems = ProxyState.toDoItems
+  }
 }
 
 export const toDoService = new ToDoService()

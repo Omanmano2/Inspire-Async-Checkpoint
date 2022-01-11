@@ -8,9 +8,10 @@ let template = ''
 list.forEach(l => template += l.Template)
 document.getElementById('todo').innerHTML = template
 }
+
 export class ToDoController {
   constructor() {
-    ProxyState.on('toDoItems', _drawToDoItems)
+    ProxyState.on('toDoItems', _drawToDoItems) 
     toDoService.getAllToDoItems()
   }
   drawToDoItems() {
@@ -40,6 +41,13 @@ export class ToDoController {
         await toDoService.deleteToDo(id)
         toast(`${foundToDo.description} was yeeted!`)
       }
+    } catch (error) {
+      console.error(error)
+    }
+  }
+  async completeToDo(id){
+    try{
+      await toDoService.completeToDo(id)
     } catch (error) {
       console.error(error)
     }
